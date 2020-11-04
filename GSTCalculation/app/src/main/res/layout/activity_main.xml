@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_weight="5.2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount (Rs.)"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/border"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5.8"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5.8"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cb_include_gst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Include GST"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/cb_exclude_gst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Exclude GST"
+                    android:textSize="15dp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5.7"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GST Rate (%)"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_gst_percent"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="33dp"
+                android:background="@drawable/border"
+                android:drawableRight="@drawable/icon"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5.3"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_result"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@color/blue"
+                android:enabled="false"
+                android:text="Result"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@color/blue"
+                android:text="Reset"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/et_gst_amount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/et_total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
